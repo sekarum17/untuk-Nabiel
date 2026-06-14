@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday,Nabiel Izzullah Pansuri❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:800px;
+    background:rgba(255,255,255,0.95);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    text-align:center;
+    z-index:2;
+}
+
+h1{
+    color:#ff4d6d;
+    margin-bottom:20px;
+}
+
+.typing{
+    font-size:1.2rem;
+    color:#555;
+    margin-bottom:25px;
+    min-height:35px;
+}
+
+.message{
+    text-align:left;
+    line-height:1.9;
+    color:#444;
+    font-size:1.05rem;
+}
+
+.message p{
+    margin-bottom:15px;
+}
+
+.signature{
+    margin-top:30px;
+    text-align:right;
+    font-weight:bold;
+    color:#ff4d6d;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:20px;
+    animation:float 8s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:0.8;
+    }
+    100%{
+        transform:translateY(-120px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎂 Happy 25th Birthday 🎂</h1>
+
+    <div class="typing" id="typing"></div>
+
+    <button onclick="showLetter()">Open My Letter ❤️</button>
+
+    <div class="message" id="letter" style="display:none; margin-top:25px;">
+
+        <p><strong>Dear, Nabiel Izzullah Pansuri.</strong></p>
+
+        <p>
+            Here’s to the sweetest, the loveliest, the most caring person I’ve ever met.
+            Look who's turn 25 today? HAHAHAHA welcome to quarter life crisis my man ❤️
+        </p>
+
+        <p>
+            May Allah keep you safe from any harm that comes your way.
+            Semoga kamu selalu diberikan keberkahan, kesehatan, kecerdasan,
+            dan kekuatan buat selalu ngejalanin hari harimu.
+            Semoga setiap langkah dan nafasmu selalu berada di jalan Allah SWT.
+        </p>
+
+        <p>
+            Di umur yang baru ini, semoga sabarmu selalu luas, sayangmu selalu ada.
+            Thank you for being one of the most important parts of my universe.
+            All the colours in my life have become more vivid since you entered my life.
+        </p>
+
+        <p>
+            Aku minta maaf di perayaan ulang tahun pertamamu sama aku,
+            aku belum bisa ngasih hadiah mahal dan bagus.
+            Tapi semoga kamu selalu percaya kalau aku akan selalu ada disampingmu,
+            disisimu, berjalan seiringan dengan kamu.
+        </p>
+
+        <p>
+            Aku minta maaf kalau aku selalu merepotkan kamu,
+            bikin kamu sedih, jadi beban buat kamu.
+            Terima kasih sayang, karena sudah selalu ada untuk menerima
+            baik dan kurangku.
+        </p>
+
+        <p>
+            I’m so fucking grateful that you’ve entered my life.
+            Terima kasih sudah hadir menjadi bagian hidupku,
+            calon suamiku.
+        </p>
+
+        <p>
+            Selamat ulang tahun, sayangku, Nabiel ❤️
+        </p>
+
+        <div class="signature">
+            With all my love,<br>
+            Sekar ❤️
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const text =
+"Happy Birthday, My Future Husband ❤️";
+
+let i = 0;
+
+function typeWriter(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,80);
+    }
+}
+
+typeWriter();
+
+function showLetter(){
+    document.getElementById("letter").style.display = "block";
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (Math.random()*20+15) + "px";
+    heart.style.animationDuration = (Math.random()*5+5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,500);
+
+</script>
+
+</body>
+</html>
